@@ -1,0 +1,18 @@
+
+<div class="container">
+    <a routerLink='/characters' class='btn btn-primary'>Volver</a>
+    <div class="row">
+        <div class="col-4 mt-4" *ngFor="let char of character">
+            <div class="card">
+                <img src="{{char.img}}" alt="character" class="img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title">{{char.name}}</h3>
+                    <p class="card-text">{{char.char_id}}</p>
+                    <p class="card-text">{{char.birthday}}</p>
+                    <p class="card-text">{{char.occupation}}</p>
+                    <p class="card-text">{{char.created | date: "short"}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
